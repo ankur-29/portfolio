@@ -1,0 +1,15 @@
+/* Footer Styles */
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--glass-border);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}

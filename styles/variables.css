@@ -1,5 +1,6 @@
 :root {
   --color-primary: #d4af37;
+  --color-bg: #09090b;
   --color-heading: #ffffff;
   --color-text-secondary: #a1a1aa;
   --glass-bg: rgba(17, 17, 17, 0.7);
@@ -10,4 +11,13 @@
   --transition-fast: 180ms ease;
   --transition-normal: 320ms ease;
   --z-navbar: 1000;
+}
+
+.light {
+  --color-bg: #f4f4f5;
+  --color-heading: #09090b;
+  --color-text-secondary: #71717a;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(212, 175, 55, 0.15);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
 }

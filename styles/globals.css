@@ -2,5 +2,37 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Design Tokens & Theme base */
 @import "./variables.css";
-@import "./components/navbar.css";
+@import "./theme.css";
+
+/* Core Architecture & Helpers */
+@import "./typography.css";
+@import "./layout.css";
+@import "./utilities.css";
+@import "./animations.css";
+@import "./scrollbar.css";
+
+/* Global Component Elements */
+@import "./components.css";
+@import "./navbar.css";
+@import "./footer.css";
+
+/* Page-Specific Layout Styles */
+@import "./hero.css";
+@import "./skills.css";
+@import "./projects.css";
+@import "./timeline.css";
+@import "./contact.css";
+@import "./loading.css";
+
+/* Global Responsive Overrides */
+@import "./responsive.css";
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-geist-sans), sans-serif;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  min-height: 100vh;
+}

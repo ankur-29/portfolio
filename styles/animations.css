@@ -1,0 +1,21 @@
+/* Keyframes & Page Transitions */
+
+.page-transition-wrapper {
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite ease-in-out;
+}

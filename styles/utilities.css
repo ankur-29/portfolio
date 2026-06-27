@@ -1,0 +1,19 @@
+/* Helper Utilities */
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-primary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+}

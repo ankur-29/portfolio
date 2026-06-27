@@ -1,0 +1,289 @@
+/* Hero Section Layout */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 120px);
+  padding: 0;
+}
+
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-overlay > * {
+  pointer-events: auto;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: #09090b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.3);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.hero-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* 3D Scene HTML Overlay Glass UI */
+
+.glass-ui-card {
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: var(--font-geist-sans), sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  user-select: none;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.glass-ui-card--hoverable:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+  transform: scale(1.05);
+}
+
+.glass-ui-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.glass-ui-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.glass-ui-value--primary {
+  color: var(--color-primary);
+}
+
+.glass-ui-subtext {
+  font-size: 0.65rem;
+  color: var(--color-text-secondary);
+}
+
+/* Tech Stack Specifics */
+.tech-icons-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.tech-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 1rem;
+}
+
+/* Code Editor Screen Styles */
+
+.screen-editor {
+  width: 320px;
+  height: 200px;
+  border-radius: 0.5rem;
+  background: #0d0d0f;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.525rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-editor-header {
+  background: #151518;
+  height: 18px;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.screen-editor-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.screen-editor-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.screen-editor-title {
+  color: var(--color-text-secondary);
+  font-size: 0.45rem;
+}
+
+.screen-editor-body {
+  padding: 0.5rem;
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.screen-editor-lines {
+  color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  user-select: none;
+}
+
+.screen-editor-code {
+  color: #c9d1d9;
+  flex: 1;
+  white-space: pre;
+}
+
+/* Syntax Highlighting */
+.syntax-keyword { color: #ff7b72; }
+.syntax-variable { color: #ffa657; }
+.syntax-function { color: #d2a8ff; }
+.syntax-string { color: #a5d6ff; }
+.syntax-comment { color: #8b949e; }
+.syntax-accent { color: var(--color-primary); }
+
+/* Floating Script Panel */
+.glass-script-card {
+  width: 200px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  color: #e6edf3;
+  pointer-events: none;
+}
+
+/* Standing Glass Cards */
+.standing-glass-card {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.25rem;
+  font-family: var(--font-geist-sans), sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  white-space: nowrap;
+}
+
+.standing-glass-logo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.15rem;
+}
+
+.standing-glass-text {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* Glass Round badge */
+.round-glass-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: monospace;
+}

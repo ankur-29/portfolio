@@ -1,0 +1,68 @@
+/* Preloader Overlay */
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: #09090b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1), opacity 0.8s ease;
+}
+
+.preloader-overlay--hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+/* Preloader Content */
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: min(100% - 3rem, 400px);
+}
+
+.preloader-percentage {
+  font-family: monospace;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+/* Loader Track & Progress Bar */
+
+.preloader-track {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-bar {
+  height: 100%;
+  background: var(--color-primary);
+  width: var(--progress, 0%);
+  transition: width 0.15s linear;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.preloader-status {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  min-height: 1.25rem;
+  text-align: center;
+}
