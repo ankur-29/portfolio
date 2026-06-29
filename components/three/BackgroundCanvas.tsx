@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
 import { scrollBridge } from "@/lib/ScrollBridge";
-import SpaceDust from "./SpaceDust";
+import WorkspaceScene from "../3d/WorkspaceScene";
 
 function CameraController() {
   const { camera } = useThree();
@@ -92,20 +92,11 @@ export default function BackgroundCanvas() {
     <div className="fixed inset-0 -z-10 bg-[#09090b] w-screen h-screen overflow-hidden">
       <Canvas
         shadows
-        camera={{ position: [0, 1.2, 6.8], fof: 45 } as any}
+        camera={{ position: [0, 1.2, 6.8], fov: 45 } as any}
         gl={{ antialias: true, alpha: false }}
         className="w-full h-full"
       >
-        {/* Environment Lights */}
-        <ambientLight intensity={0.25} />
-        <directionalLight position={[5, 8, 3]} intensity={0.8} castShadow />
-        <pointLight position={[-4, 3, -4]} intensity={0.4} color="#d4af37" />
-        <pointLight position={[4, -3, 4]} intensity={0.3} color="#06b6d4" />
-        
-        {/* Drifting star dust */}
-        <SpaceDust count={300} />
-
-        {/* Global Camera Scroll Controller */}
+        <WorkspaceScene />
         <CameraController />
       </Canvas>
     </div>
