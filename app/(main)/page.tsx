@@ -1,13 +1,12 @@
-import Preloader from "@/components/ui/Preloader";
+//import Preloader from "@/components/ui/Preloader";
 import BackgroundCanvas from "@/components/three/BackgroundCanvas";
 
-export const unstable_instant = false;
+//export const unstable_instant = false;
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Page Preloader Overlay */}
-      <Preloader />
+      /* 1. Page Preloader Overlay */
 
       {/* 2. Global 3D Background Canvas */}
       <BackgroundCanvas />
