@@ -1,17 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { NavbarItemProps } from "./Navbar.types";
 
-export default function NavbarItem({ item, }: NavbarItemProps) {
-  const pathname = usePathname();
-
-  const isActive =
-    item.href === "/"
-      ? pathname === "/"
-      : pathname.startsWith(item.href);
+export default function NavbarItem({ item, activeSection}: NavbarItemProps) {
+  const section = item.href === "#" ? "home" : item.href.substring(1);
+  const isActive = activeSection === section;
 
   return (
     <Link

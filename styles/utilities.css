@@ -1,10 +1,284 @@
-/* Helper Utilities */
+/* LAYOUT */
+.container {
+  width: min(100% - (var(--container-padding) * 2), var(--container-width));
+  margin-inline: auto;
+}
+
+.content-width {
+  max-width: var(--content-width);
+}
+
+.reading-width {
+  max-width: var(--reading-width);
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+/* Gap */
+.gap-2 {
+  gap: var(--spacing-2);
+}
+
+.gap-4 {
+  gap: var(--spacing-4);
+}
+
+.gap-6 {
+  gap: var(--spacing-6);
+}
+
+.gap-8 {
+  gap: var(--spacing-8);
+}
+
+.gap-10 {
+  gap: var(--spacing-10);
+}
+
+.gap-12 {
+  gap: var(--spacing-12);
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, var(--color-primary) 100%);
-  background-clip: text;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    #ffffff
+  );
+
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Font weights */
+.fw-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.fw-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.fw-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+/* Glass */
+.glass {
+  background: var(--glass-background);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+/* Border */
+.border {
+  border: 1px solid var(--color-border);
+}
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* Shadows */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-card-hover:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+/* Surface */
+.surface {
+  background: var(--color-surface);
+}
+
+.surface-hover:hover {
+  background: var(--color-surface-hover);
+}
+
+/* Transitions */
+.transition {
+  transition:
+    all var(--duration-normal)
+    var(--ease-standard);
+}
+
+.transition-fast {
+  transition:
+    all var(--duration-fast)
+    var(--ease-standard);
+}
+
+.transition-slow {
+  transition:
+    all var(--duration-slow)
+    var(--ease-standard);
+}
+
+/* HOVER EFFECTS */
+.hover-lift {
+  transition:
+    transform var(--duration-normal)
+      var(--ease-standard),
+    box-shadow var(--duration-normal)
+      var(--ease-standard);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+.hover-scale {
+  transition:
+    transform var(--duration-normal)
+      var(--ease-standard);
+}
+
+.hover-scale:hover {
+  transform: scale(var(--scale-hover));
+}
+
+/* POSITION */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* OVERFLOW */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }
 
 .sr-only {
@@ -15,5 +289,6 @@
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border-width: 0;
+  white-space: nowrap;
+  border: 0;
 }

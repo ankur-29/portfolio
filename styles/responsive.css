@@ -1,7 +1,27 @@
 /* Global Responsive Overrides */
 
-@media (max-width: 640px) {
-  body {
-    font-size: 0.925rem;
+@media (max-width: 1024px) {
+  .section {
+    padding-block: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 5rem;
+    padding-inline: 1.25rem;
+  }
+  .container {
+    width: min(100% - 2rem, var(--container-width));
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-block: 4rem;
+    padding-inline: 1rem;
+  }
+  .container {
+    width: min(100% - 1.5rem, var(--container-width));
   }
 }

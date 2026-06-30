@@ -7,17 +7,15 @@ import { NavbarDesktopProps } from "./Navbar.types";
 
 import { profile } from "@/data/profile";
 
-export default function NavbarDesktop({ navigation, socials }: NavbarDesktopProps) {
+export default function NavbarDesktop({activeSection, navigation, socials }: NavbarDesktopProps) {
   return (
     <div className="navbar-desktop">
-      <nav
-        className="navbar-links"
-        aria-label="Primary Navigation"
-      >
+      <nav className="navbar-links" aria-label="Primary Navigation">
         {navigation.map((item) => (
           <NavbarItem
             key={item.id}
             item={item}
+            activeSection={activeSection}
           />
         ))}
       </nav>
@@ -48,15 +46,6 @@ export default function NavbarDesktop({ navigation, socials }: NavbarDesktopProp
             );
           })}
         </div>
-
-        {/* Theme Toggle (Coming Later) */}
-        <button
-          type="button"
-          className="navbar-theme-button"
-          aria-label="Toggle Theme"
-        >
-          ☀
-        </button>
       </div>
     </div>
   );

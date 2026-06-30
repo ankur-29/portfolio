@@ -1,23 +1,130 @@
-:root {
-  --color-primary: #d4af37;
-  --color-bg: #09090b;
-  --color-heading: #ffffff;
-  --color-text-secondary: #a1a1aa;
-  --glass-bg: rgba(17, 17, 17, 0.7);
-  --glass-border: rgba(212, 175, 55, 0.12);
-  --glass-blur: 20px;
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.35);
-  --radius-full: 999px;
-  --transition-fast: 180ms ease;
-  --transition-normal: 320ms ease;
-  --z-navbar: 1000;
-}
+/* 
+  PORTFOLIO DESIGN TOKENS --> Single Theme (Dark + Golden Accent) 
+*/
 
-.light {
-  --color-bg: #f4f4f5;
-  --color-heading: #09090b;
-  --color-text-secondary: #71717a;
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(212, 175, 55, 0.15);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
+:root {
+  /* Backgrounds */
+  --color-background: #080808;
+  --color-background-secondary: #101010;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+
+  /* Text */
+  --color-text: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+
+  /* Brand */
+  --color-primary: #d4af37;
+  --color-primary-hover: #f7c980;
+  --color-primary-active: #e8a642;
+  --color-primary-soft: rgba(244, 184, 96, 0.15);
+  --color-primary-glow: rgba(244, 184, 96, 0.35);
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(244, 184, 96, 0.25);
+
+  /* Glass */
+  --glass-background: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* TYPOGRAPHY */
+  --font-family-base: var(--font-geist-sans);
+  --font-family-mono: var(--font-geist-mono);
+
+  --font-size-display: clamp(3.5rem, 6vw, 5rem);
+  --font-size-h1: clamp(2.75rem, 5vw, 4rem);
+  --font-size-h2: clamp(2.1rem, 4vw, 3rem);
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.5rem;
+
+  --font-size-body-lg: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.7;
+
+  /* SPACING */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+
+  /* Semantic spacing */
+  --section-padding-y: 7rem;
+  --section-padding-x: 1.5rem;
+
+  --container-padding: 1.5rem;
+
+  /* CONTAINER */
+  --container-width: 1280px;
+  --content-width: 1200px;
+  --reading-width: 760px;
+
+  /* HEADER */
+  --header-height: 80px;
+
+  /* BORDER  */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* SHADOWS */
+  --shadow-card: 0 10px 35px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(244, 184, 96, 0.18);
+  --shadow-button: 0 8px 30px rgba(244, 184, 96, 0.25);
+
+  /* Blur */
+  --blur-sm: 8px;
+  --blur-md: 16px;
+  --blur-lg: 24px;
+
+  /* Z-INDEX */
+  --z-background: -1;
+  --z-default: 1;
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-overlay: 300;
+  --z-modal: 500;
+  --z-toast: 1000;
+
+  /* TRANSITIONS */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* EFFECTS */
+  --scale-hover: 1.03;
+  --scale-active: 0.98;
+  --backdrop-blur: blur(18px);
 }

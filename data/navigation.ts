@@ -12,31 +12,31 @@ export const navigation: NavigationItem[] = [
   {
     id: 1,
     title: "Home",
-    href: "/",
+    href: "#",
     icon: House,
   },
   {
     id: 2,
     title: "About",
-    href: "/about",
+    href: "#about",
     icon: User,
   },
   {
     id: 3,
     title: "Experience",
-    href: "/experience",
+    href: "#experience",
     icon: BriefcaseBusiness,
   },
   {
     id: 4,
     title: "Projects",
-    href: "/projects",
+    href: "#projects",
     icon: FolderGit2,
   },
   {
     id: 5,
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
     icon: Mail,
   },
 ];

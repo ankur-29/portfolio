@@ -1,4 +1,10 @@
 /* Containers & Grid Layouts */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
 
 .main-layout {
   padding-top: 7rem;

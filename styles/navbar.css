@@ -1,10 +1,8 @@
-/* Navbar */
-
 .navbar {
   position: fixed;
   inset-block-start: 0;
   inset-inline: 0;
-  z-index: var(--z-navbar);
+  z-index: var(--z-header);
   display: flex;
   justify-content: center;
   padding: 1.25rem 0;
@@ -27,9 +25,8 @@
 }
 
 /* Container */
-
 .navbar-container {
-  width: min(100% - 2rem, 1280px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +37,6 @@
 }
 
 /* Glass Effect */
-
 .navbar--scrolled .navbar-container {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -50,7 +46,6 @@
 }
 
 /* Logo */
-
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -66,7 +61,6 @@
 }
 
 /* Desktop Navigation */
-
 .navbar-desktop {
   display: flex;
   align-items: center;
@@ -74,7 +68,6 @@
 }
 
 /* Links */
-
 .navbar-links {
   display: flex;
   align-items: center;
@@ -103,7 +96,6 @@
 }
 
 /* Active */
-
 .navbar-link--active {
   color: var(--color-primary);
 }
@@ -197,23 +189,13 @@
   transition: all var(--transition-fast);
 }
 
-.light .navbar-social-button {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
 .navbar-social-button:hover {
   color: var(--color-heading);
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
-
-.light .navbar-social-button:hover {
-  background: rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
+/*
 .navbar-theme-button {
   display: inline-flex;
   align-items: center;
@@ -229,11 +211,6 @@
   transition: all var(--transition-fast);
 }
 
-.light .navbar-theme-button {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
 .navbar-theme-button:hover {
   color: var(--color-primary);
   background: rgba(212, 175, 55, 0.05);
@@ -241,6 +218,7 @@
   transform: rotate(15deg);
 }
 
+*/
 /* Mobile Toggler Button */
 .navbar-mobile-button {
   display: inline-flex;
@@ -254,11 +232,6 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all var(--transition-fast);
-}
-
-.light .navbar-mobile-button {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.05);
 }
 
 .navbar-mobile-button:hover {
@@ -311,11 +284,6 @@
   transition: all var(--transition-fast);
 }
 
-.light .navbar-mobile-drawer-close {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
 .navbar-mobile-drawer-close:hover {
   color: var(--color-heading);
   background: rgba(255, 255, 255, 0.08);
@@ -343,11 +311,6 @@
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-.light .navbar-mobile-link {
-  background: rgba(0, 0, 0, 0.01);
-  border-color: rgba(0, 0, 0, 0.01);
-}
-
 .navbar-mobile-link:hover {
   color: var(--color-heading);
   background: rgba(255, 255, 255, 0.05);
@@ -355,19 +318,10 @@
   transform: translateX(4px);
 }
 
-.light .navbar-mobile-link:hover {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
 .navbar-mobile-link--active {
   color: var(--color-primary);
   background: rgba(212, 175, 55, 0.05);
   border-color: var(--glass-border);
-}
-
-.light .navbar-mobile-link--active {
-  background: rgba(212, 175, 55, 0.08);
 }
 
 /* Drawer Actions */
